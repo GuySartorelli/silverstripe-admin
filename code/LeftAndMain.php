@@ -59,7 +59,7 @@ use SilverStripe\View\SSViewer;
  * If you are wanting to add more areas to the CMS, you can do it by subclassing LeftAndMain.
  *
  * This is essentially an abstract class which should be subclassed.
- * See {@link CMSMain} for a good example.
+ * See {@link ModelTreeAdmin} or {@link ModelAdmin} for good examples.
  */
 class LeftAndMain extends Controller implements PermissionProvider
 {

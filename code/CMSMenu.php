@@ -2,7 +2,6 @@
 
 namespace SilverStripe\Admin;
 
-use SilverStripe\CMS\Controllers\CMSMain;
 use SilverStripe\Core\ClassInfo;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\Core\Convert;
@@ -382,7 +381,7 @@ class CMSMenu implements IteratorAggregate, i18nEntityProvider
             $root = LeftAndMain::class;
         }
         /** @todo Make these actual abstract classes */
-        $abstractClasses = [LeftAndMain::class, CMSMain::class];
+        $abstractClasses = [LeftAndMain::class];
         $subClasses = array_values(ClassInfo::subclassesFor($root) ?? []);
         foreach ($subClasses as $className) {
             if ($recursive && $className != $root) {
