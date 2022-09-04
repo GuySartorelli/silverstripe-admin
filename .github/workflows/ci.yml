@@ -14,3 +14,9 @@ jobs:
     # Only run cron on the silverstripe account
     if: (github.event_name == 'schedule' && github.repository_owner == 'silverstripe') || (github.event_name != 'schedule')
     uses: creative-commoners/gha-ci/.github/workflows/ci.yml@pulls/1/poc-blackfire
+    secrets:
+      BLACKFIRE_ENV: ${{ secrets.BLACKFIRE_ENV }}
+      BLACKFIRE_SERVER_ID: ${{ secrets.BLACKFIRE_SERVER_ID }}
+      BLACKFIRE_SERVER_TOKEN: ${{ secrets.BLACKFIRE_SERVER_TOKEN }}
+      BLACKFIRE_CLIENT_ID: ${{ secrets.BLACKFIRE_CLIENT_ID }}
+      BLACKFIRE_CLIENT_TOKEN: ${{ secrets.BLACKFIRE_CLIENT_TOKEN }}

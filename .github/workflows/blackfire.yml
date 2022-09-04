@@ -33,4 +33,4 @@ jobs:
       env:
         APP_ENV: prod
         APP_DEBUG: 0
-      run: blackfire run php -r 'echo "what";'
+      run: blackfire run --env=${{ secrets.BLACKFIRE_ENV }} php -r 'echo "what";'
